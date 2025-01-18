@@ -42,6 +42,7 @@ class App:
 
             if self.screen_drawover:
                 self.window.fill(self.background)
+
             self.object_update_and_draw()
             pygame.display.flip()
 
