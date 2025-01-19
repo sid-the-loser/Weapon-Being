@@ -4,6 +4,7 @@ from sidengine.colors import *
 
 class App:
     def __init__(self):
+        self.window: pygame.Surface
         self.window = None
 
         self.window_size = (600, 600)
@@ -35,6 +36,7 @@ class App:
 
             pygame.display.flip()
             await asyncio.sleep(0)
+
 
 class Scene:
     def __init__(self):
