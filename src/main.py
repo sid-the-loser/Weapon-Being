@@ -71,11 +71,11 @@ class DevSplashScreen(Scene):
 class TitleScreen(Scene):
     def __init__(self):
         super().__init__()
-        self.font = pygame.font.SysFont("Arial", 42)
-        self.text = self.font.render("Weapon Being", True, (255, 255, 255))
+        self.font = pygame.font.Font(fl.spectral_sc, 42)
+        self.text = self.font.render("Weapon beinG", True, (255, 255, 255))
         self.text_rect = self.text.get_rect(center=(myapp.window_size[0] // 2, myapp.window_size[1] // 2))
 
-        self.font1 = pygame.font.SysFont("Arial", 16)
+        self.font1 = pygame.font.SysFont("Times New Roman", 16)
         self.text1 = self.font1.render("Press any key to continue...", True, (255, 255, 255))
         self.text_rect1 = self.text1.get_rect(center=((myapp.window_size[0] // 2), (myapp.window_size[1] // 2)+(42+16)))
 
