@@ -1,6 +1,9 @@
 import pygame
 import asyncio
+
 from sidengine.app import App, Scene
+from sidengine.gameobject import Empty
+
 import file_locations as fl
 
 myapp = App()
@@ -86,6 +89,21 @@ class TitleScreen(Scene):
     def events(self, event: pygame.event):
         if event.type == pygame.KEYDOWN:
             myapp.change_scene(0)
+
+
+class GameplayScene(Scene):
+    def __init__(self):
+        super().__init__()
+        self.gameobject_list = []
+
+    def update(self):
+        gameobject: Empty
+        for gameobject in self.gameobject_list:
+            gameobject.update(myapp.dt)
+            gameobject.draw(myapp.window)
+
+    def draw(self):
+        pass
 
 
 myapp.scenes = [EngineSplashScreen(), DevSplashScreen(), TitleScreen()]

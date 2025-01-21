@@ -1,6 +1,6 @@
 import pygame
 import asyncio
-from sidengine.colors import *
+from sidengine.color import *
 
 class App:
     def __init__(self):
@@ -32,7 +32,7 @@ class App:
     async def run(self):
         while self.running:
             self.window.fill(BLACK)
-            self.dt = self.clock.tick() / 1000
+            self.dt = self.clock.tick() / 1000 # convertion to seconds from milliseconds
 
             if len(self.scenes) > 0:
                 if not self.scenes[self.current_scene_index].init_ran:
