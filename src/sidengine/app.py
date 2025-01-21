@@ -45,7 +45,7 @@ class App:
                 if event.type == pygame.QUIT:
                     self.running = False
 
-                if len(self.scenes) > 0:
+                elif len(self.scenes) > 0:
                     self.scenes[self.current_scene_index].events(event)
 
             pygame.display.flip()
