@@ -3,7 +3,7 @@ import asyncio
 from sidengine.color import *
 
 class App:
-    def __init__(self):
+    def __init__(self) -> None:
         self.window: pygame.Surface
         self.window = None
 
@@ -19,17 +19,17 @@ class App:
         self.scenes = []
         self.current_scene_index = 0
 
-    def init(self):
+    def init(self) -> None:
         pygame.init()
 
         self.window = pygame.display.set_mode(self.window_size)
         pygame.display.set_caption(self.window_title)
 
-    def change_scene(self, scene_index):
+    def change_scene(self, scene_index: int) -> None:
         self.scenes[self.current_scene_index].init_ran = False
         self.current_scene_index = scene_index
 
-    async def run(self):
+    async def run(self) -> None:
         while self.running:
             self.window.fill(BLACK)
             self.dt = self.clock.tick() / 1000 # convertion to seconds from milliseconds
@@ -53,17 +53,17 @@ class App:
 
 
 class Scene:
-    def __init__(self):
+    def __init__(self) -> None:
         self.init_ran = False
 
-    def init(self):
+    def init(self) -> None:
         pass
 
-    def update(self):
+    def update(self) -> None:
         pass
 
-    def draw(self):
+    def draw(self) -> None:
         pass
 
-    def events(self, event: pygame.event):
+    def events(self, event: pygame.event) -> None:
         pass
