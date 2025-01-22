@@ -9,6 +9,8 @@ import file_locations as fl
 
 myapp = App()
 
+myapp.window_title = "Weapon Being"
+
 myapp.init()
 
 
