@@ -109,7 +109,7 @@ class LoreScene(Scene):
             y=16//2
         )
 
-        self.next_scene_index = 0
+        self.next_scene_index = 4
 
     def draw(self):
         self.text_display.draw(myapp.window)
@@ -133,8 +133,13 @@ class GameplayScene(Scene):
     def draw(self):
         pass
 
+    def events(self, event: pygame.event) -> None:
+        if event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_ESCAPE:
+                myapp.running = False
+
 # All scenes that will be included in the build of the game
-myapp.scenes = [EngineSplashScreen(), DevSplashScreen(), TitleScreen(), LoreScene()]
+myapp.scenes = [EngineSplashScreen(), DevSplashScreen(), TitleScreen(), LoreScene(), GameplayScene()]
 
 async def main():
     await myapp.run()
