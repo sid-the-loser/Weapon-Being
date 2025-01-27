@@ -100,13 +100,13 @@ class LoreScene(Scene):
     def __init__(self):
         super().__init__()
         self.text_display = SimpleTextDisplay(
-            text="testing\nsomething here",
-            font_location="Arial",
+            text=open(fl.lore).read(),
+            font_location="Times New Roman",
             is_sys_font = True,
-            font_size=16,
+            font_size=24,
             font_color=WHITE,
             x=myapp.window_size[0] // 2,
-            y=16//2
+            y=24//2
         )
 
         self.next_scene_index = 4
