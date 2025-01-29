@@ -1,9 +1,0 @@
-So, this is where I was supposed to be explaining the story
-of the game. But I'm too tired of having to do this.
-
-Making an engine and a game at the same time has led me to
-making my first mistake. I made individual game objects to
-make use of different functionalities within the game.
-Turns out, if I had followed in the steps of Unity, I
-would've only needed to make a couple of components that
-had to be attached to an object.

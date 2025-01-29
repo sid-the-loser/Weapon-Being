@@ -1,0 +1,15 @@
+"Metamorfosi was once Zeus's favourite weapon.
+
+Until one day the drunken god decided to throw the
+weapon and ordered it to fly forever.
+
+Cursed to abide by a drunkards wishes,
+the shape-shifting weapon flew off.
+
+Destroying anything in its path."
+
+
+Press "W" or "S" to morph between different forms.
+
+Press "Up Arrow" or "Down Arrow" to dodge or collide
+with things in the environment.

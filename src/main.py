@@ -99,6 +99,15 @@ class TitleScreen(Scene):
 class LoreScene(Scene):
     def __init__(self):
         super().__init__()
+        self.text_display_title = SimpleTextDisplay(
+            text="Lore",
+            font_location=fl.spectral_sc,
+            is_sys_font=False,
+            font_size=72,
+            font_color=WHITE,
+            x=myapp.window_size[0] // 2,
+            y = 72 // 2
+        )
         self.text_display = SimpleTextDisplay(
             text=open(fl.lore).read(),
             font_location="Times New Roman",
@@ -106,13 +115,14 @@ class LoreScene(Scene):
             font_size=24,
             font_color=WHITE,
             x=myapp.window_size[0] // 2,
-            y=24//2
+            y= (24 // 2) + 72 + 50
         )
 
         self.next_scene_index = 4
 
     def draw(self):
         self.text_display.draw(myapp.window)
+        self.text_display_title.draw(myapp.window)
 
     def events(self, event: pygame.event):
         if event.type == pygame.KEYDOWN:
