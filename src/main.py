@@ -78,11 +78,11 @@ class TitleScreen(Scene):
     def __init__(self):
         super().__init__()
         self.font = pygame.font.Font(fl.spectral_sc, 42)
-        self.text = self.font.render("Weapon beinG", True, WHITE)
+        self.text = self.font.render("Weapon beinG", False, WHITE)
         self.text_rect = self.text.get_rect(center=(myapp.window_size[0] // 2, myapp.window_size[1] // 2))
 
         self.font1 = pygame.font.SysFont("Times New Roman", 16)
-        self.text1 = self.font1.render("Press any key to continue...", True, WHITE)
+        self.text1 = self.font1.render("Press any key to continue...", False, WHITE)
         self.text_rect1 = self.text1.get_rect(center=((myapp.window_size[0] // 2), (myapp.window_size[1] // 2)+(42+16)))
 
         self.next_scene_index = 3
@@ -106,7 +106,8 @@ class LoreScene(Scene):
             font_size=72,
             font_color=WHITE,
             x=myapp.window_size[0] // 2,
-            y = 72 // 2
+            y = 72 // 2,
+            antialiasing=False
         )
         self.text_display = SimpleTextDisplay(
             text=open(fl.lore).read(),
@@ -115,7 +116,8 @@ class LoreScene(Scene):
             font_size=24,
             font_color=WHITE,
             x=myapp.window_size[0] // 2,
-            y= (24 // 2) + 72 + 50
+            y= (24 // 2) + 72 + 50,
+            antialiasing=False
         )
 
         self.next_scene_index = 4
