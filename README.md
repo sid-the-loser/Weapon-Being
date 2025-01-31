@@ -1,5 +1,5 @@
 # Weapon-Being
-A game I'm making for Pirate Software Game Jam 16
+A game I'm making for Pirate Software Game Jam 16 (late to submit, so, I will develop as I feel like)
 
 I joined this jam to take my engine on a test ride. This game uses an engine of mine called SidEngine, a wrapper for Pygame in one sense. It's still being worked on, so if you find any bugs, you know why lol
 
